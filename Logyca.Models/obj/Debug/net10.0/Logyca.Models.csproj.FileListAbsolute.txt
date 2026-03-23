@@ -1,0 +1,14 @@
+C:\Proyectos\pruebas\PruebaLogyca\Logyca.Models\bin\Debug\net10.0\Logyca.Models.deps.json
+C:\Proyectos\pruebas\PruebaLogyca\Logyca.Models\bin\Debug\net10.0\Logyca.Models.dll
+C:\Proyectos\pruebas\PruebaLogyca\Logyca.Models\bin\Debug\net10.0\Logyca.Models.pdb
+C:\Proyectos\pruebas\PruebaLogyca\Logyca.Models\obj\Debug\net10.0\Logyca.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proyectos\pruebas\PruebaLogyca\Logyca.Models\obj\Debug\net10.0\Logyca.Models.AssemblyInfoInputs.cache
+C:\Proyectos\pruebas\PruebaLogyca\Logyca.Models\obj\Debug\net10.0\Logyca.Models.AssemblyInfo.cs
+C:\Proyectos\pruebas\PruebaLogyca\Logyca.Models\obj\Debug\net10.0\Logyca.Models.csproj.CoreCompileInputs.cache
+C:\Proyectos\pruebas\PruebaLogyca\Logyca.Models\obj\Debug\net10.0\Logyca.Models.dll
+C:\Proyectos\pruebas\PruebaLogyca\Logyca.Models\obj\Debug\net10.0\refint\Logyca.Models.dll
+C:\Proyectos\pruebas\PruebaLogyca\Logyca.Models\obj\Debug\net10.0\Logyca.Models.pdb
+C:\Proyectos\pruebas\PruebaLogyca\Logyca.Models\obj\Debug\net10.0\ref\Logyca.Models.dll
+C:\Proyectos\pruebas\PruebaLogyca\Logyca.Models\bin\Debug\net10.0\Logyca.Models.runtimeconfig.json
+C:\Proyectos\pruebas\PruebaLogyca\Logyca.Models\obj\Debug\net10.0\Logyca.Models.csproj.AssemblyReference.cache
+C:\Proyectos\pruebas\PruebaLogyca\Logyca.Models\obj\Debug\net10.0\Logyca.Models.genruntimeconfig.cache

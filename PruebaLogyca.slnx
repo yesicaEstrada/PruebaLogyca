@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Logyca.Data/Logyca.Data.csproj" />
+  <Project Path="Logyca.Models/Logyca.Models.csproj" />
+  <Project Path="PruebaLogyca/PruebaLogyca.csproj" />
+</Solution>

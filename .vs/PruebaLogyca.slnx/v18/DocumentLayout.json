@@ -1,0 +1,206 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Proyectos\\pruebas\\PruebaLogyca\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B3AE210B-909D-9268-E732-D54B2811805D}|PruebaLogyca\\PruebaLogyca.csproj|c:\\proyectos\\pruebas\\pruebalogyca\\pruebalogyca\\pruebalogyca.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B3AE210B-909D-9268-E732-D54B2811805D}|PruebaLogyca\\PruebaLogyca.csproj|solutionrelative:pruebalogyca\\pruebalogyca.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3AE210B-909D-9268-E732-D54B2811805D}|PruebaLogyca\\PruebaLogyca.csproj|c:\\proyectos\\pruebas\\pruebalogyca\\pruebalogyca\\controllers\\enterprisescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3AE210B-909D-9268-E732-D54B2811805D}|PruebaLogyca\\PruebaLogyca.csproj|solutionrelative:pruebalogyca\\controllers\\enterprisescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3AE210B-909D-9268-E732-D54B2811805D}|PruebaLogyca\\PruebaLogyca.csproj|c:\\proyectos\\pruebas\\pruebalogyca\\pruebalogyca\\controllers\\codescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3AE210B-909D-9268-E732-D54B2811805D}|PruebaLogyca\\PruebaLogyca.csproj|solutionrelative:pruebalogyca\\controllers\\codescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48804732-3A87-AE23-32CB-C77CEC048A3B}|Logyca.Models\\Logyca.Models.csproj|c:\\proyectos\\pruebas\\pruebalogyca\\logyca.models\\enterprisedto\\enterprisecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48804732-3A87-AE23-32CB-C77CEC048A3B}|Logyca.Models\\Logyca.Models.csproj|solutionrelative:logyca.models\\enterprisedto\\enterprisecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48804732-3A87-AE23-32CB-C77CEC048A3B}|Logyca.Models\\Logyca.Models.csproj|c:\\proyectos\\pruebas\\pruebalogyca\\logyca.models\\codesdto\\codedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48804732-3A87-AE23-32CB-C77CEC048A3B}|Logyca.Models\\Logyca.Models.csproj|solutionrelative:logyca.models\\codesdto\\codedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94286D4E-F25F-840A-D094-FFB635D537DC}|Logyca.Data\\Logyca.Data.csproj|c:\\proyectos\\pruebas\\pruebalogyca\\logyca.data\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94286D4E-F25F-840A-D094-FFB635D537DC}|Logyca.Data\\Logyca.Data.csproj|solutionrelative:logyca.data\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48804732-3A87-AE23-32CB-C77CEC048A3B}|Logyca.Models\\Logyca.Models.csproj|c:\\proyectos\\pruebas\\pruebalogyca\\logyca.models\\enterprisedto\\enterpriseupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48804732-3A87-AE23-32CB-C77CEC048A3B}|Logyca.Models\\Logyca.Models.csproj|solutionrelative:logyca.models\\enterprisedto\\enterpriseupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48804732-3A87-AE23-32CB-C77CEC048A3B}|Logyca.Models\\Logyca.Models.csproj|c:\\proyectos\\pruebas\\pruebalogyca\\logyca.models\\enterprisedto\\enterprisedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48804732-3A87-AE23-32CB-C77CEC048A3B}|Logyca.Models\\Logyca.Models.csproj|solutionrelative:logyca.models\\enterprisedto\\enterprisedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48804732-3A87-AE23-32CB-C77CEC048A3B}|Logyca.Models\\Logyca.Models.csproj|c:\\proyectos\\pruebas\\pruebalogyca\\logyca.models\\codesdto\\updatecodedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48804732-3A87-AE23-32CB-C77CEC048A3B}|Logyca.Models\\Logyca.Models.csproj|solutionrelative:logyca.models\\codesdto\\updatecodedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48804732-3A87-AE23-32CB-C77CEC048A3B}|Logyca.Models\\Logyca.Models.csproj|c:\\proyectos\\pruebas\\pruebalogyca\\logyca.models\\codesdto\\codecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48804732-3A87-AE23-32CB-C77CEC048A3B}|Logyca.Models\\Logyca.Models.csproj|solutionrelative:logyca.models\\codesdto\\codecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3AE210B-909D-9268-E732-D54B2811805D}|PruebaLogyca\\PruebaLogyca.csproj|c:\\proyectos\\pruebas\\pruebalogyca\\pruebalogyca\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B3AE210B-909D-9268-E732-D54B2811805D}|PruebaLogyca\\PruebaLogyca.csproj|solutionrelative:pruebalogyca\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PruebaLogyca",
+              "DocumentMoniker": "C:\\Proyectos\\pruebas\\PruebaLogyca\\PruebaLogyca\\PruebaLogyca.csproj",
+              "RelativeDocumentMoniker": "PruebaLogyca\\PruebaLogyca.csproj",
+              "ToolTip": "C:\\Proyectos\\pruebas\\PruebaLogyca\\PruebaLogyca\\PruebaLogyca.csproj",
+              "RelativeToolTip": "PruebaLogyca\\PruebaLogyca.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-23T21:24:40.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CodesController.cs",
+              "DocumentMoniker": "C:\\Proyectos\\pruebas\\PruebaLogyca\\PruebaLogyca\\Controllers\\CodesController.cs",
+              "RelativeDocumentMoniker": "PruebaLogyca\\Controllers\\CodesController.cs",
+              "ToolTip": "C:\\Proyectos\\pruebas\\PruebaLogyca\\PruebaLogyca\\Controllers\\CodesController.cs",
+              "RelativeToolTip": "PruebaLogyca\\Controllers\\CodesController.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAAAG4AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T19:23:25.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EnterpriseCreateDto.cs",
+              "DocumentMoniker": "C:\\Proyectos\\pruebas\\PruebaLogyca\\Logyca.Models\\EnterpriseDto\\EnterpriseCreateDto.cs",
+              "RelativeDocumentMoniker": "Logyca.Models\\EnterpriseDto\\EnterpriseCreateDto.cs",
+              "ToolTip": "C:\\Proyectos\\pruebas\\PruebaLogyca\\Logyca.Models\\EnterpriseDto\\EnterpriseCreateDto.cs",
+              "RelativeToolTip": "Logyca.Models\\EnterpriseDto\\EnterpriseCreateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T20:30:21.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EnterpriseUpdateDto.cs",
+              "DocumentMoniker": "C:\\Proyectos\\pruebas\\PruebaLogyca\\Logyca.Models\\EnterpriseDto\\EnterpriseUpdateDto.cs",
+              "RelativeDocumentMoniker": "Logyca.Models\\EnterpriseDto\\EnterpriseUpdateDto.cs",
+              "ToolTip": "C:\\Proyectos\\pruebas\\PruebaLogyca\\Logyca.Models\\EnterpriseDto\\EnterpriseUpdateDto.cs",
+              "RelativeToolTip": "Logyca.Models\\EnterpriseDto\\EnterpriseUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T20:30:00.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CodeCreateDto.cs",
+              "DocumentMoniker": "C:\\Proyectos\\pruebas\\PruebaLogyca\\Logyca.Models\\CodesDto\\CodeCreateDto.cs",
+              "RelativeDocumentMoniker": "Logyca.Models\\CodesDto\\CodeCreateDto.cs",
+              "ToolTip": "C:\\Proyectos\\pruebas\\PruebaLogyca\\Logyca.Models\\CodesDto\\CodeCreateDto.cs",
+              "RelativeToolTip": "Logyca.Models\\CodesDto\\CodeCreateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T20:03:10.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CodeDto.cs",
+              "DocumentMoniker": "C:\\Proyectos\\pruebas\\PruebaLogyca\\Logyca.Models\\CodesDto\\CodeDto.cs",
+              "RelativeDocumentMoniker": "Logyca.Models\\CodesDto\\CodeDto.cs",
+              "ToolTip": "C:\\Proyectos\\pruebas\\PruebaLogyca\\Logyca.Models\\CodesDto\\CodeDto.cs",
+              "RelativeToolTip": "Logyca.Models\\CodesDto\\CodeDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T20:03:07.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Proyectos\\pruebas\\PruebaLogyca\\Logyca.Data\\Persistence\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Logyca.Data\\Persistence\\AppDbContext.cs",
+              "ToolTip": "C:\\Proyectos\\pruebas\\PruebaLogyca\\Logyca.Data\\Persistence\\AppDbContext.cs",
+              "RelativeToolTip": "Logyca.Data\\Persistence\\AppDbContext.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAzwBAAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T19:38:42.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EnterprisesController.cs",
+              "DocumentMoniker": "C:\\Proyectos\\pruebas\\PruebaLogyca\\PruebaLogyca\\Controllers\\EnterprisesController.cs",
+              "RelativeDocumentMoniker": "PruebaLogyca\\Controllers\\EnterprisesController.cs",
+              "ToolTip": "C:\\Proyectos\\pruebas\\PruebaLogyca\\PruebaLogyca\\Controllers\\EnterprisesController.cs",
+              "RelativeToolTip": "PruebaLogyca\\Controllers\\EnterprisesController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAABoAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T04:53:03.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UpdateCodeDto.cs",
+              "DocumentMoniker": "C:\\Proyectos\\pruebas\\PruebaLogyca\\Logyca.Models\\CodesDto\\UpdateCodeDto.cs",
+              "RelativeDocumentMoniker": "Logyca.Models\\CodesDto\\UpdateCodeDto.cs",
+              "ToolTip": "C:\\Proyectos\\pruebas\\PruebaLogyca\\Logyca.Models\\CodesDto\\UpdateCodeDto.cs",
+              "RelativeToolTip": "Logyca.Models\\CodesDto\\UpdateCodeDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T20:31:18.758Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EnterpriseDto.cs",
+              "DocumentMoniker": "C:\\Proyectos\\pruebas\\PruebaLogyca\\Logyca.Models\\EnterpriseDto\\EnterpriseDto.cs",
+              "RelativeDocumentMoniker": "Logyca.Models\\EnterpriseDto\\EnterpriseDto.cs",
+              "ToolTip": "C:\\Proyectos\\pruebas\\PruebaLogyca\\Logyca.Models\\EnterpriseDto\\EnterpriseDto.cs",
+              "RelativeToolTip": "Logyca.Models\\EnterpriseDto\\EnterpriseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T19:14:11.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Proyectos\\pruebas\\PruebaLogyca\\PruebaLogyca\\appsettings.json",
+              "RelativeDocumentMoniker": "PruebaLogyca\\appsettings.json",
+              "ToolTip": "C:\\Proyectos\\pruebas\\PruebaLogyca\\PruebaLogyca\\appsettings.json",
+              "RelativeToolTip": "PruebaLogyca\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-22T06:45:24.041Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
