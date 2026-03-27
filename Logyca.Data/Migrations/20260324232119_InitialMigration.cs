@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Logyca.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class CreacionRelacionEnterpiseCode : Migration
+    public partial class InitialMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -51,6 +51,12 @@ namespace Logyca.Data.Migrations
                 name: "IX_Code_OwnerId",
                 table: "Code",
                 column: "OwnerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Enterprise_Nit",
+                table: "Enterprise",
+                column: "Nit",
+                unique: true);
         }
 
         /// <inheritdoc />

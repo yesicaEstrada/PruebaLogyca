@@ -5,6 +5,7 @@ using Logyca.Models.EnterpriseDto;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using PruebaLogyca.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,28 +17,21 @@ namespace PruebaLogyca.Controllers
     [ApiController]
     public class CodesController : ControllerBase
     {
+        private readonly CodeService _codeService;
+
         private readonly AppDbContext _context;
 
-        public CodesController(AppDbContext context)
+        public CodesController(AppDbContext context, CodeService codeService)
         {
             _context = context;
+            _codeService = codeService;
         }
 
         // GET: api/Codes
         [HttpGet]
         public async Task<ActionResult<IEnumerable<CodeDto>>> GetCodes()
         {
-            var codes = await _context.Codes
-                .Include(c => c.Owner)
-                .Select(c => new CodeDto
-                {
-                    Id = c.Id,
-                    Name = c.Name,
-                    Description = c.Description,
-                    OwnerId = c.OwnerId,
-                    OwnerName = c.Owner.Name
-                })
-                .ToListAsync();
+            var codes = await _codeService.GetCodes();
 
             return Ok(codes);
         }
@@ -46,18 +40,7 @@ namespace PruebaLogyca.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<CodeDto>> GetCodesById(int id)
         {
-            var code = await _context.Codes
-                .Include(c => c.Owner)
-                .Select(c => new CodeDto
-                {
-                    Id = c.Id,
-                    Name = c.Name,
-                    Description = c.Description,
-                    OwnerId = c.OwnerId,
-                    OwnerName = c.Owner.Name
-                })
-                .FirstOrDefaultAsync(e => e.Id == id);
-
+            var code = await _codeService.GetCodeById(id);
             if (code == null)
             {
                 return NotFound();
@@ -70,25 +53,14 @@ namespace PruebaLogyca.Controllers
         [HttpGet("Enterprise/{idEnterprise}")]
         public async Task<ActionResult<IEnumerable<CodeDto>>> GetCodeByIdEnterprise(int idEnterprise)
         {
-            var codes = await _context.Codes
-                .Include(c => c.Owner)
-                .Where(c => c.OwnerId == idEnterprise) 
-                .Select(c => new CodeDto
-                {
-                    Id = c.Id,
-                    Name = c.Name,
-                    Description = c.Description,
-                    OwnerId = c.OwnerId,
-                    OwnerName = c.Owner.Name
-                })
-                .ToListAsync();
+            var codes = await _codeService.GetCodeByIdEnterpriseAsync(idEnterprise);
 
-            if (codes == null || codes.Count == 0)
+            if (codes != null)
             {
-                return NotFound();
+                return Ok(codes);
             }
 
-            return Ok(codes);
+            return NotFound();
         }
 
 
@@ -96,16 +68,9 @@ namespace PruebaLogyca.Controllers
         [HttpPost]
         public async Task<ActionResult<CodeDto>> CreateCode(CodeCreateDto code)
         {
-            var codes = new Code
-            {
-                Name = code.Name,
-                Description = code.Description,
-                OwnerId = code.OwnerId
-            };
-            _context.Codes.Add(codes);
-            await _context.SaveChangesAsync();
+            var codes = await _codeService.CreateCodeAsync(code);
 
-            return CreatedAtAction(nameof(GetCodes), new { id = codes.Id }, codes);
+            return codes;
         }
 
         // PATCH: api/Codes/5
@@ -117,45 +82,9 @@ namespace PruebaLogyca.Controllers
                 return BadRequest("Datos inválidos");
             }
 
-            var code = await _context.Codes.FindAsync(id);
+            var code = await _codeService.UpdateCodeAsync(id, updateDto);
 
-            if (code == null)
-            {
-                return NotFound();
-            }
-
-            //actualizar solo lo enviado
-            if(updateDto.Name != null)
-            {
-                code.Name = updateDto.Name;
-            }
-
-            if (updateDto.Description != null)
-            {
-                code.Description = updateDto.Description;
-            }
-
-            if(updateDto.OwnerId.HasValue)
-            {
-                var ownerExist = await _context.Enterprises.AnyAsync(e => e.Id == updateDto.OwnerId.Value);
-
-                if(!ownerExist)
-                {
-                    return BadRequest($"No existe la empresa con Id {updateDto.OwnerId.Value}");
-                }
-
-                code.OwnerId = updateDto.OwnerId.Value;
-            }
-
-            await _context.SaveChangesAsync();
-
-            return Ok(new CodeDto
-            {
-                Id = code.Id,
-                Name = code.Name,
-                Description = code.Description,
-                OwnerId = code.OwnerId
-            });
+            return Ok(code);
         }
     }
 }

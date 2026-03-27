@@ -21,7 +21,7 @@ namespace Logyca.Data.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("Logyca.Models.Code", b =>
+            modelBuilder.Entity("Logyca.Data.Models.Code", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -47,7 +47,7 @@ namespace Logyca.Data.Migrations
                     b.ToTable("Code");
                 });
 
-            modelBuilder.Entity("Logyca.Models.Enterprise", b =>
+            modelBuilder.Entity("Logyca.Data.Models.Enterprise", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -68,12 +68,15 @@ namespace Logyca.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Nit")
+                        .IsUnique();
+
                     b.ToTable("Enterprise");
                 });
 
-            modelBuilder.Entity("Logyca.Models.Code", b =>
+            modelBuilder.Entity("Logyca.Data.Models.Code", b =>
                 {
-                    b.HasOne("Logyca.Models.Enterprise", "Owner")
+                    b.HasOne("Logyca.Data.Models.Enterprise", "Owner")
                         .WithMany("Codes")
                         .HasForeignKey("OwnerId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -82,7 +85,7 @@ namespace Logyca.Data.Migrations
                     b.Navigation("Owner");
                 });
 
-            modelBuilder.Entity("Logyca.Models.Enterprise", b =>
+            modelBuilder.Entity("Logyca.Data.Models.Enterprise", b =>
                 {
                     b.Navigation("Codes");
                 });

@@ -10,6 +10,7 @@ using Logyca.Models;
 using Logyca.Data.Models;
 using Logyca.Models.EnterpriseDto;
 using Logyca.Models.CodesDto;
+using PruebaLogyca.Services;
 
 namespace PruebaLogyca.Controllers
 {
@@ -17,56 +18,30 @@ namespace PruebaLogyca.Controllers
     [ApiController]
     public class EnterprisesController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly EnterpriseService _enterpriseService;
 
-        public EnterprisesController(AppDbContext context)
+        public EnterprisesController(EnterpriseService service)
         {
-            _context = context;
+            _enterpriseService = service;
         }
 
         // GET: api/Enterprises
         [HttpGet]
         public async Task<ActionResult<IEnumerable<EnterpriseDto>>> GetEnterprises()
         {
-            return await _context.Enterprises
-                .Include(e => e.Codes)
-                .Select(e => new EnterpriseDto
-                {
-                    Id = e.Id,
-                    Name = e.Name,
-                    Nit = e.Nit,
-                    Gln = e.Gln,
-                    Codes = e.Codes.Select(c => new CodeDto
-                    {
-                        Id =c.Id,
-                        Name=c.Name,
-                        Description = c.Description
-                    }).ToList()
-                }).ToListAsync();
+            var enterprises = await _enterpriseService.GetEnterprises();
+
+            return Ok(enterprises);
         }
 
         //GET: api/ByNit/12544
         [HttpGet("ByNit/{nit}")]
         public async Task<ActionResult<IEnumerable<EnterpriseDto>>> GetEnterpriseByNit(long nit)
         {
-            var enterprise = await _context.Enterprises
-                .Include(e => e.Codes)
-                .Where(e => e.Nit == nit)
-                .Select(e => new EnterpriseDto
-                {
-                    Id = e.Id,
-                    Name = e.Name,
-                    Nit = e.Nit,
-                    Gln = e.Gln,
-                    Codes = e.Codes.Select(c => new CodeDto
-                    {
-                        Id = c.Id,
-                        Name = c.Name,
-                        Description = c.Description
-                    }).ToList()
-                }).FirstOrDefaultAsync();
+            var enterprise  = await _enterpriseService.GetEnterpriseByNitAsync(nit);
 
-            if(enterprise == null) {
+            if (enterprise == null)
+            {
 
                 return NotFound();
             }
@@ -76,25 +51,9 @@ namespace PruebaLogyca.Controllers
         [HttpGet("enterprise/byCodigo/{codeId}")]
         public async Task<ActionResult<IEnumerable<EnterpriseDto>>> GetEnterpriseByCode(int codeId)
         {
-            var result = await _context.Codes
-                .Where(c => c.Id == codeId)
-                .Select(c => new EnterpriseDto
-                {
-                    Id = c.OwnerId,
-                    Name = c.Owner.Name,
-                    Nit = c.Owner.Nit,
-                    Gln = c.Owner.Gln,
-                    Codes = new List<CodeDto>
-                    {
-                        new CodeDto{
-                            Id = c.Id,
-                            Name = c.Name,
-                            Description = c.Description
-                        }
-                    }
-                }).FirstOrDefaultAsync();
+            var result = await _enterpriseService.GetEnterpriseByCode(codeId);
 
-            if(result == null)
+            if (result == null)
             {
                 return NotFound();
             }
@@ -107,72 +66,42 @@ namespace PruebaLogyca.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Enterprise>> GetEnterprise(int id)
         {
-            var enterprise = await _context.Enterprises.FindAsync(id);
+            var enterprise = await _enterpriseService.GetEnterpriseByIdAsync(id);
 
             if (enterprise == null)
             {
                 return NotFound();
             }
 
-            return enterprise;
+            return Ok(enterprise);
         }
 
         // PUT: api/Enterprises/5
         [HttpPatch("actualizar/{id}")]
-        public async Task<IActionResult> EditEnterprise(int id, [FromBody] EnterpriseUpdateDto enterprisedto)
+        public async Task<ActionResult<EnterpriseDto>> EditEnterprise(int id, [FromBody] EnterpriseUpdateDto enterprisedto)
         {
             if (enterprisedto == null)
             {
                 return BadRequest("Datos inválidos");
             }
 
-            var enterprise = await _context.Enterprises.FindAsync(id);
+            var enterprise = await _enterpriseService.EnterpriseUpdateAsync(id, enterprisedto);
 
             if (enterprise == null) 
             {
-                return NotFound();
+                return BadRequest(enterprise);
             }
 
-            if(enterprisedto.Name != null)
-            {
-                enterprise.Name = enterprisedto.Name;
-            }
-
-            if(enterprisedto.Nit != null)
-            {
-                enterprise.Nit = enterprisedto.Nit;
-            }
-
-            if(enterprisedto.Gln != null)
-            {
-                enterprise.Gln = enterprisedto.Gln.Value;
-            }
-
-            await _context.SaveChangesAsync();
-
-            return Ok(new EnterpriseDto
-            {
-                Id = enterprise.Id,
-                Name = enterprise.Name,
-                Nit = enterprisedto.Nit,
-                Gln = enterprise.Gln
-            });
+            return Ok(enterprise);
         }
 
         // POST: api/Enterprises
         [HttpPost]
-        public async Task<ActionResult<EnterpriseDto>> SaveEnterprise(EnterpriseDto enterprise)
+        public async Task<ActionResult<EnterpriseDto>> SaveEnterprise(EnterpriseCreateDto enterprise)
         {
-            var enterprises = new Enterprise
-            {
-                Name = enterprise.Name,
-                Nit = enterprise.Nit,
-                Gln = enterprise.Gln
-            };
-            _context.Enterprises.Add(enterprises);
-            await _context.SaveChangesAsync();
+            var enterprises = await _enterpriseService.CreateEnterpriseAsync(enterprise);
 
-            return CreatedAtAction(nameof(GetEnterprise), new { id =  enterprises.Id }, enterprises);
+            return Ok(enterprises);
         }
     }
 }
